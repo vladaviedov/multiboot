@@ -15,7 +15,7 @@ create_base() {
 
 	# Mount to loop
 	LOOP=$($3 losetup -f)
-	$3 losetup $LOOP $1/build/multiboot.iso
+	$3 losetup -P $LOOP $1/build/multiboot.iso
 
 	# Partition ISO
 	echo "g
